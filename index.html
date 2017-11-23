@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>Как не тестировать React библиотеку и крепко спать</h1>
+		<p>Артур Удалов, Mail.Ru Group</p>
+	</header>
+
+	<section class="slide" id="cover">
+		<img class="logo" src="pictures/mail_ru.jpg" />
+		<h2>Как не тестировать<br/> React библиотеку<br/>и крепко спать</h2>
+		<p>Артур Удалов, Mail.Ru Group</p>
+		<figure>
+			<img class="cover" src="pictures/sleeping_baby.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+
+
+		<style>
+			#cover .logo {
+				z-index: 1000;
+				position: absolute;
+				width: 200px;
+				bottom: 10px;
+				right: 10px;
+			}
+			#cover::after {
+				visibility: hidden;
+			}
+			#cover h2 {
+				margin:200px 0 0;
+				color:#FFF;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				color:#FFF;
+				font-size:20px;
+			}
+			#cover .cover {
+				font-family: Helvetica, Arial, sans-serif;
+				max-width: none;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>UI библиотека Почты Mail.RU</h2>
+		<ul>
+			<li>15+ разработчиков в почте</li>
+			<li>Облако и другие проекты</li>
+			<li>Каждый может сделать commit</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>У нас есть тест<s>ы</s>!</h2>
+		<pre>
+			<code class="hljs javascript">test('Оберег', () => {</code>
+			<code class="hljs javascript">	expect(true)</code>
+			<code class="hljs javascript">      .toBe(true)</code>
+			<code class="hljs javascript">});</code>
+		</pre>
+	</section>
+
+	<section class="slide" id="toolkit">
+		<figure>
+			<img class="cover" src="pictures/toolkit.png" alt="Orange typewriter on a wooden table close-up">
+		</figure>
+		<style>
+			#toolkit {
+				background: black;
+			}
+			#toolkit::after {
+				visibility: hidden;
+			}
+			#toolkit .cover {
+				max-height: none;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="css">
+		<h2>Из чего состоит UI библиотека?</h2>
+			<img src="pictures/cssdiagram.png" class="diagram" alt="Orange typewriter on a wooden table close-up">
+
+			<style>
+			#css .diagram {
+				position: relative;
+				top: 20px;
+				left: -20px;
+				max-height: 80%;
+				max-width: 100%;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Как тестировать CSS?</h2>
+		<ul>
+			<li>Тестирование скриншотами</li>
+			<li>Выбор инструмента</li>
+			<li>Объект тестирования</li>
+			<li>Кроссплатформенность</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>BackstopJS</h2>
+		<ul>
+			<li>Простейшая конфигурация</li>
+			<li>Работает напрямую с Headless Chrome</li>
+			<li>Легко запустить локально</li>
+			<li>Визуальные отчёты</li>
+		</ul>
+	</section>
+
+	<section class="slide" id="backstop">
+		<h2>BackstopJS</h2>
+		<img src="pictures/backstopjs.png"/>
+		<style>
+			#backstop img {
+				margin-top: 30px;
+				width: 100%;
+				border-radius: 8px;
+				padding: 20px;
+				background: #F6F8FA;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="npmlink">
+		<h2>Что скриншотить?</h2>
+		<img src="pictures/NPMlink.svg" class="diagram" alt="Orange typewriter on a wooden table close-up">
+		<style>
+			#npmlink .diagram {
+				position: relative;
+				top: 100px;
+				width: 100%;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="storybook">
+		<img src="./pictures/storybook.png">
+		<style>
+			#storybook {
+				background: #F7F7F7;
+			}
+			#storybook img{
+				max-width: 100%;
+				max-height: 100%;
+				position: absolute;
+				top: 10px;
+				left: 0;
+				margin-top: 0;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>React Storybook</h2>
+		<ul>
+			<li>Разработка и тестирование</li>
+			<li>Hot Module Replacement</li>
+			<li>Документация</li>
+			<li>Можно спрятать интерфейс</li>
+			<li>Генерация сценариев</li>
+		</ul>
+	</section>
+
+	<section class="slide" id="iframe1">
+		<h2>React Storybook</h2>
+		<img src="pictures/iframe2.png" class="chrome">
+		<style>
+			#iframe1 .chrome {
+				position: relative;
+				top: 20px;
+				left: -20px;
+				max-height: 80%;
+				max-width: 100%;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="iframe2">
+		<h2>React Storybook</h2>
+		<img src="pictures/iframe1.png" class="chrome">
+		<style>
+			#iframe2 .chrome {
+				position: relative;
+				top: 20px;
+				left: -20px;
+				max-height: 80%;
+				max-width: 100%;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="generate">
+		<h2>Генерация сценариев</h2>
+		<img src="pictures/generate.png">
+		<style>
+			#generate img {
+				position: relative;
+				top: 20px;
+				left: -20px;
+				max-height: 80%;
+				max-width: 100%;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="docker">
+		<h2>Используйте Docker</h2>
+		<ul>
+			<li>Одинаковые результаты в любом окружении</li>
+			<li>Один образ в CI и локально</li>
+		</ul>
+		<img class="docker" src="pictures/docker.png"/>
+		<img class="qr" src="pictures/qr.png"/>
+		<style>
+			#docker .docker {
+				position: absolute;
+				bottom: 39px;
+				max-height: 40%;
+			}
+			#docker .qr {
+				position: absolute;
+				right: 100px;
+				bottom: 40px;
+				height: 40%;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Результат</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Результат</h2>
+		<ul>
+			<li>Удобное средство разработки</li>
+			<li>End-to-End тестирование</li>
+			<li>Тесты пишутся сами</li>
+			<li>ESLint, TypeScript, Flow по вкусу</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Тесты это хорошо!</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Лень</h2>
+		<pre>
+			<code class="hljs javascript">test('Оберег', () => {</code>
+			<code class="hljs javascript">	expect(true)</code>
+			<code class="hljs javascript">      .toBe(true)</code>
+			<code class="hljs javascript">});</code>
+		</pre>
+	</section>
+
+	<section class="slide" id="istanbul">
+		<h2 class="shout">
+			<img class="istanbul" src="pictures/istanbul.png"/><br/>
+			100% coverage</h2>
+
+		<style>
+			#istanbul {
+
+			}
+			#istanbul h2 {
+
+			}
+			#istanbul img {
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Ссылки</h2>
+		<ul>
+			<li>
+				Storybook Driven Development:
+				<a href="https://medium.com/nulogy/storybook-driven-development-a3c517276c07">Medium</a>
+			</li>
+			<li>
+				Handling spacing in a UI component library:
+				<a href="https://medium.com/fed-or-dead/handling-spacing-in-a-ui-component-library-70f3b22ec89">Medium</a>
+			</li>
+			<li>
+				<a href="https://garris.github.io/BackstopJS/">BackstopJS</a>
+			</li>
+			<li>
+				<a href="https://storybook.js.org/">React Storybook</a>
+			</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Спасибо!</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="http://t.me/audalov">@audalov</a></h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Вопросы?</h2>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
